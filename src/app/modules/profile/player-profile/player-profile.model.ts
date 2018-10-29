@@ -1,4 +1,5 @@
 import { CrewProfile } from '../crew-profile/crew-profile.model';
+import { GameProfile } from '../game-profile/game-profile.model';
 
 export interface PlayerProfile {
   // Basic information
@@ -13,7 +14,14 @@ export interface PlayerProfile {
   twitterURL: String;
   youtubeURL: String;
   twitchURL: String;
+  discordUser: String;
   websiteURL: String;
+
+  // Console ID information
+  steamId: String;
+  nintendoId: String;
+  playStationId: String;
+  xboxId: String;
 
   // Geography information
   country: String;
@@ -21,5 +29,5 @@ export interface PlayerProfile {
   city: String;
 
   // Competitive information
-  competitiveGames: String[];
+  competitiveGames: GameProfile[];
 }
